@@ -1,3 +1,8 @@
+/*
+ * Credits:
+ * https://github.com/motdotla/dotenv/blob/master/lib/cli-options.js
+ */
+
 const re = /^dotenv_config_(encoding|path|debug)=(.+)$/
 
 export function parse(args: string[]) {

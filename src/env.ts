@@ -1,3 +1,8 @@
+/*
+ * Credits:
+ * https://github.com/motdotla/dotenv/blob/master/lib/env-options.js
+ */
+
 const options: Record<string, string> = {}
 
 if (process.env.DOTENV_CONFIG_ENCODING != null) {
