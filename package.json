@@ -2,7 +2,7 @@
   "name": "dotenv2",
   "version": "1.0.0",
   "description": "Load environment variables with ease",
-  "main": "dist/index.ts",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
