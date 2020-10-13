@@ -1,5 +1,5 @@
 {
-  "name": "@iwatakeshi/dotenv",
+  "name": "dotenv2",
   "version": "1.0.0",
   "description": "Load environment variables with ease",
   "main": "dist/index.ts",
@@ -7,7 +7,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/iwatakeshi/dotenv.git",
+  "repository": "https://github.com/iwatakeshi/dotenv2.git",
   "author": "Takeshi Iwana <iwatakeshi@gmail.com>",
   "license": "MIT",
   "private": false,
