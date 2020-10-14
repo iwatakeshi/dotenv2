@@ -44,16 +44,17 @@ const config = (
       console.log(parsed)
     }
 
-    for (const key in parsed) {
-      if (!parsed[key]) {
+    Object.keys(parsed).forEach(function (key) {
+      if (!Object.prototype.hasOwnProperty.call(process.env, key)) {
         process.env[key] = parsed[key]
+        if (debug)
+          console.log(`[dotenv][debug] process.env.${key} = ${parsed[key]}`)
       } else if (debug) {
         console.log(
-          `[dotenv][warn] ${key} is already defined in \`process.env\` and will not be overwritten`
+          `[dotenv][warn] "${key}" is already defined in \`process.env\` and will not be overwritten`
         )
       }
-      return parsed
-    }
+    })
   } catch (error) {
     return { error }
   }
