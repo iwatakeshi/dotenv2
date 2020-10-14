@@ -38,6 +38,12 @@ const config = (
     const source = readFileSync(path, { encoding }).toString()
     const tokens = lexer(source).scan()
     const parsed = parser(tokens).parse()
+
+    if (debug) {
+      console.log(`[dotenv][debug] parsed:`)
+      console.log(parsed)
+    }
+
     for (const key of Object.keys(parsed)) {
       if (!Object.prototype.hasOwnProperty.call(process.env, key)) {
         process.env[key] = parsed[key]

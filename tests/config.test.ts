@@ -1,4 +1,4 @@
-import { config } from '../'
+import config from '../src/config'
 import fs from 'fs'
 
 describe('config', () => {
