@@ -153,5 +153,5 @@ The parsing engine currently supports the following rules:
 - double quoted values expand new lines (`MULTILINE="new\nline"` becomes
 
 ```
-{MULTILINE: 'newline'}
+{MULTILINE: 'new\nline'}
 ```
