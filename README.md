@@ -1,4 +1,4 @@
-# dotenv
+# dotenv2
 
 Load environment variables with ease.
 
