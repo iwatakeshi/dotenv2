@@ -55,6 +55,7 @@ const config = (
         )
       }
     })
+    return parsed
   } catch (error) {
     return { error }
   }
