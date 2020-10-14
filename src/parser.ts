@@ -43,7 +43,7 @@ const parser = (tokens: Token[]) => {
         const key = consume(TokenType.identifier, 'Expected an identifier.')
         consume(TokenType.equal, 'Expected "="')
         const value = consume(TokenType.string, 'Expected a string.')
-        result[key.lexeme!] = value.lexeme!.replace(/\n|\r/g, '')
+        result[key.lexeme!] = value.lexeme!
       }
       while (!ended()) {
         if (match(TokenType.reserved)) {
