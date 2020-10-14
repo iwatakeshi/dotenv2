@@ -157,5 +157,5 @@ line example.
 becomes:
 
 ```ts
-"This is a multi\nline example.
+"This is a multi\nline example."
 ```
