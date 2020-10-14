@@ -148,10 +148,14 @@ The parsing engine currently supports the following rules:
 - lines beginning with `#` are treated as comments
 - empty values **are not allowed**
 - inner quotes **are not supported**
-- whitespace is removed from both ends of unquoted values (see more on [`trim`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim)) (`FOO= some value ` becomes `{FOO: 'some value'}`)
-- single and double quoted values maintain whitespace from both ends (`FOO=" some value "` becomes `{FOO: ' some value '}`)
-- double quoted values expand new lines (`MULTILINE="new\nline"` becomes
+- multiline strings are supported:
 
+```sh
+export MULTI_LINE="This is a multi
+line example.
 ```
-{MULTILINE: 'new\nline'}
+becomes:
+
+```ts
+"This is a multi\nline example.
 ```
