@@ -2,7 +2,7 @@
 
 Load environment variables with ease.
 
-Dotenv is a library similar to [motdotla's Dotenv](https://github.com/motdotla/dotenv). However, this library supports multiline strings and the `export` reserved word. In addition, this library is a little stricter in that the enviroment key-pair must be consistent since it uses a handwritten lexer and parser.
+Dotenv is a library similar to [motdotla's Dotenv](https://github.com/motdotla/dotenv). However, this library adds support for the `export` reserved word. In addition, this library is a little stricter in that the enviroment key-pair must be consistent since it uses a handwritten lexer and parser.
 
 ## Usage
 
