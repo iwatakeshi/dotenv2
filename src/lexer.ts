@@ -12,7 +12,7 @@ const lexer = (source: string) => {
 
   /** Determines if the stream has ended */
   const ended = () => position >= source.length
-  /** Returns the next charater from the source string */
+  /** Returns the next character from the source string */
   const next = () => {
     position++
     return source.charAt(position - 1)
@@ -22,11 +22,11 @@ const lexer = (source: string) => {
   /** Adds a token into the `tokens` array. */
   const addToken = (token: Token) => tokens.push(token)
 
-  /** Determines whether the charater is an alphabet. */
+  /** Determines whether the character is an alphabet. */
   const isAlpha = (char: string) => /[A-Za-z]/.test(char)
-  /** Determines whether the charater is a digit. */
+  /** Determines whether the character is a digit. */
   const isDigit = (char: string) => /[0-9]/.test(char)
-  /** Determines whether the charater is a special charater. */
+  /** Determines whether the character is a special character. */
   const isSpecial = (char: string) =>
     /\=|\!|\@|\$|\%|\^|\&|\*|\(|\)|\-|\_|\+|\{|\[|\}|\]|\:|\;|\<|\>|\,|\.|\~|\`|\\|\|/.test(
       char
