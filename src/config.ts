@@ -44,8 +44,8 @@ const config = (
       console.log(parsed)
     }
 
-    for (const key of Object.keys(parsed)) {
-      if (!Object.prototype.hasOwnProperty.call(process.env, key)) {
+    for (const key in parsed) {
+      if (!parsed[key]) {
         process.env[key] = parsed[key]
       } else if (debug) {
         console.log(
