@@ -1,6 +1,11 @@
 import Token, { TokenType } from './token'
-
+import { platform } from 'os'
 const lexer = (source: string) => {
+  // Make sure to use unix style newlines
+  if (platform() === 'win32') {
+    source = source.replace(/\r\n/gi, '\n')
+  }
+
   // Keep track of the current position
   let position = 0
   // Keep track of the line position
